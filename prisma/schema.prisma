@@ -24,4 +24,5 @@ model Thing{
   approximate_value   Decimal @default(0.0)
   categoryId          Int
   category            Category @relation(fields: [categoryId], references: [id])
+  
 }
