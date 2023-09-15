@@ -19,6 +19,8 @@ model Category{
   title                String
   things               Thing[]
 }
+
+//relacionamento
 model Thing{
   id                  Int       @id @default(autoincrement())
   name                String  
