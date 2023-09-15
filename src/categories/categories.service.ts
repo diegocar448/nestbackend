@@ -9,8 +9,6 @@ export class CategoriesService {
   constructor(private readonly prisma: PrismaService){
   }
 
-
-
   create(createCategoryDto: Prisma.CategoryCreateInput) {
     return this.prisma.category.create({
       data: createCategoryDto
@@ -19,6 +17,7 @@ export class CategoriesService {
 
   update(id: number, updateCategoryDto: Prisma.CategoryUpdateInput) {
     return this.prisma.category.update({
+      // passamos o data para atualizar somente o registro especificado
       data: updateCategoryDto,
       where:{
         id: id
